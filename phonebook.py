@@ -16,20 +16,23 @@ def phonecontact(instruction):
                         if phonebook.get(name):
                             print(name,'-',phonebook[name])
                             print(30 * '*')
+                        else:
+                            print(f'Sorry!!,We cannot contact of its{name}.. ')
                         '''print(30 * '*')
                         try:
                             print(name,'-',phonebook[name])
                             print(30 * '*')
                         except KeyError:
                             print(f'Sorry!!,We cannot contact of its{name}.. ')'''
-                        print(f'Sorry!!,We cannot contact of its{name}.. ')
+                        
                     case 2:
                         name=input('Enter Name to update existing phone number:')
                         if phonebook.get(name):
                             phone_number=int(input('Enter phone number:'))
                             phonebook.update({name:phone_number})
                             print("Update contact: ",phonebook[name])
-                        print(f"==>Sorry,{name} name's contact doesnot exist\n So we cannot update")
+                        else:
+                            print(f"==>Sorry,{name} name's contact doesnot exist\n So we cannot update")
                     case 3:
                         print(30 * '*')
                         name=input('Enter Name to delete from phonebook: ')
