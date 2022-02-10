@@ -39,7 +39,8 @@ def phonecontact(instruction):
                         if phonebook.get(name):
                         # print("Deleted contact:",phonebook[name])
                             del phonebook[name]
-                        print(f"==>Sorry,{name} name's contact doesnot exist")
+                        else:
+                            print(f"==>Sorry,{name} name's contact doesnot exist")
                        
                         
                     case 4:
